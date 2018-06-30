@@ -28,8 +28,9 @@ class check_brackets {
         InputStreamReader input_stream = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(input_stream);
         String text = reader.readLine();
+        Bracket top = null;
 
-        Boolean result = true;
+        Boolean result = null;
 
         Stack<Bracket> opening_brackets_stack = new Stack<Bracket>();
         for (int position = 0; position < text.length(); ++position) {
@@ -39,6 +40,7 @@ class check_brackets {
                 // Process opening bracket, write your code here
                 Bracket bracket = new Bracket(next, position);
                 //bracket.type = next;
+                //System.out.println("pushing to stack.." + bracket.type);
                 opening_brackets_stack.push(bracket);
             }
 
@@ -46,18 +48,36 @@ class check_brackets {
                 // Process closing bracket, write your code here
 
                 if (opening_brackets_stack.empty()){
+                    //System.out.println("stack empty!");
                     result = false;
+                    System.out.println(position + 1);
+                    return;
                 }
-                Bracket top;
+
                 top = opening_brackets_stack.pop();
 
                 if ((top.type == '(' && next != ')') || (top.type == '[' && next != ']') || (top.type == '{' && next != '}')){
                     result = false;
+                    System.out.println(position + 1);
+                    return;
                 }
             }
         }
+        if(opening_brackets_stack.empty()){
+            //System.out.println("Success");
+            //break;
+            result = true;
+        }else{
+            result = false;
+            top = opening_brackets_stack.pop();
+        }
 
         // Printing answer, write your code here
-        System.out.println(result);
+        if (result.equals(true)){
+            System.out.println("Success");
+        }
+        else{
+            System.out.println(top.position + 1);
+        }
     }
 }

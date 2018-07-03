@@ -27,14 +27,21 @@ public class tree_height {
 		void read() throws IOException {
 			FastScanner in = new FastScanner();
 			n = in.nextInt();
+			System.out.println("what is n.." + n);
 			parent = new int[n];
+			//System.out.println("what is parent.." + parent);
 			for (int i = 0; i < n; i++) {
 				parent[i] = in.nextInt();
 			}
 		}
 
 		int computeHeight() {
-                        // Replace this code with a faster implementation
+            // Replace this code with a faster implementation
+            System.out.println("length.." + parent.length);
+            for (int x=0; x<parent.length;x++){
+            	System.out.println("parents.." + parent[x]);
+            }
+            
 			int maxHeight = 0;
 			for (int vertex = 0; vertex < n; vertex++) {
 				int height = 0;
@@ -42,6 +49,10 @@ public class tree_height {
 					height++;
 				maxHeight = Math.max(maxHeight, height);
 			}
+			//Queue queue;
+			//queue.Enqueue();
+			//if (null == )
+			//return 1 + Math.max(computeHeight(tree.left), computeHeight(tree.right));
 			return maxHeight;
 		}
 	}

@@ -49,7 +49,7 @@ public class tree_height {
 					height++;
 				maxHeight = Math.max(maxHeight, height);
 			}
-			//Queue queue;
+			Queue queue;
 			//queue.Enqueue();
 			//if (null == )
 			//return 1 + Math.max(computeHeight(tree.left), computeHeight(tree.right));

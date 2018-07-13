@@ -12,12 +12,12 @@ if tree = nil: return
 Queue q
 q.Enqueue(tree)
 while not q.Empty() :
-node ← q.Dequeue()
-Print(node)
-if node.left ̸= nil:
-q.Enqueue(node.left)
-if node.right ̸= nil:
-q.Enqueue(node.right)
+    node ← q.Dequeue()
+    Print(node)
+    if node.left ̸= nil:
+        q.Enqueue(node.left)
+    if node.right ̸= nil:
+        q.Enqueue(node.right)
 '''
 
 #  ParentDict = {0: [], 1: [], 2: [], 3:[], 4:[], 5:[]}

@@ -1,5 +1,5 @@
 from linked_list import Node, LinkedList
-#from blossom_lib import flower_definitions
+from restaurant_lib import restaurant_definitions
 
 class HashMap:
   def __init__(self, size):
@@ -53,21 +53,4 @@ for element in flower_definitions:
   print ("element is...", element)
   blossom.assign(element[0], element[1])
 
-print ('daisy: ', blossom.retrieve('daisy')) 
-print ('begonia: ', blossom.retrieve('begonia'))
-print ('chrysanthemum: ',blossom.retrieve('chrysanthemum'))
-print ('carnation: ',blossom.retrieve('carnation'))
-print ('daisy: ',blossom.retrieve('daisy'))
-print ('hyacinth: ',blossom.retrieve('hyacinth')) # None
-print ('lavender: ',blossom.retrieve('lavender'))
-print ('magnolia: ',blossom.retrieve('magnolia'))
-print ('morning glory: ',blossom.retrieve('morning glory')) # None
-print ('periwinkle: ',blossom.retrieve('periwinkle'))
-print ('poppy: ',blossom.retrieve('poppy'))
-print ('rose: ',blossom.retrieve('rose'))  # None
-print ('snapdragon: ',blossom.retrieve('snapdragon'))
-print ('sunflower: ',blossom.retrieve('sunflower'))
-print ('wisteria: ',blossom.retrieve('wisteria'))  # None
 
-#blossom.assign('rose', 'red')
-print (blossom.retrieve('rose'))
